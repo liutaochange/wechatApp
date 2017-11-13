@@ -9,11 +9,11 @@ Page({
     onLoad: function () {
         var that=this;
         var id= wx.getStorageSync('user');
-        if(!id){
+        if (JSON.stringify(id) == "{}"){
             wx.redirectTo({
               url: '../login/index'
             });
-            return;
+            return false;
         }
         id=id.account.id;
         this.setData({uid:id})
