@@ -3,7 +3,9 @@
 
 接口统一使用网易云新版API 具体参考 https://github.com/darknessomi/musicbox/wiki/
 
-###目前实现功能
+这里为了查看本地效果，请先运行[后端项目](https://github.com/liutaochange/music-server)
+
+##目前实现功能
 
 1. 用户
 2. 歌单
