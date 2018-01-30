@@ -54,10 +54,16 @@ Page({
     wx.request({
       url: bsurl + 'recommend/songs',
       success: function (res) {
-        that.setData({
-          songs: res.data.recommend,
-          loading: true
-        })
+        if (res.data.code==200){
+          that.setData({
+            songs: res.data.recommend,
+            loading: true
+          })
+        }else{
+          wx.redirectTo({
+            url: "../login/index"
+          })
+        }
       }
     })
   },
