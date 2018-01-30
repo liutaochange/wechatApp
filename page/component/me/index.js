@@ -9,6 +9,7 @@ Page({
     onLoad: function () {
         var that=this;
         var id= wx.getStorageSync('user');
+        console.log("login:" + JSON.stringify(id))
         if (JSON.stringify(id) == "{}"){
             wx.redirectTo({
               url: '../login/index'
@@ -45,4 +46,5 @@ Page({
     onShow: function () {
         console.log("me show----------")
      }
+    
 })

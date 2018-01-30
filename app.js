@@ -142,6 +142,7 @@ App({
     wx.request({
       url: bsurl + 'fm',
       success: function (res) {
+        console.log("fm:"+JSON.stringify(res))
         that.globalData.list_fm = res.data.data;
         that.globalData.index_fm = 0;
         that.globalData.curplay = res.data.data[0];

@@ -37,6 +37,19 @@ Page({
         },
         tabidx: 0
     },
+    tips: function () {
+      wx.showModal({
+        title: '提示',
+        content: '此功能尚未开通',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    },
     toggleplay: function () {
         common.toggleplay(this, app);
     },
